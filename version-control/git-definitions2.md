@@ -1,5 +1,7 @@
 # Git Definitions
 
+DBC Instructor Bontgoy has been very helpful in Phase 0.
+
 **Instructions: ** Define each of the following Git concepts.
 
 * What is version control?  Why is it useful?
