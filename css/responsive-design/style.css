@@ -1,6 +1,7 @@
 body {
   max-width:960px;
-  min-width: 400px;
+  min-width: 300px;
+  margin: 0 auto;
 }
 
 #external-links {
@@ -50,8 +51,35 @@ figcaption {
   text-align: right;
 }
 
-@media screen and (max-width: 500px) {
+/*@media screen and (max-width: 500px) {
   body {
     background-color: hotpink;
+  }
+}*/
+
+@media screen and (max-width: 600px) {
+  p{
+    font-size: 0.6em;
+  }
+  h1{
+    font-size: 0.6em;
+  }
+  blockquote{
+    font-size: 0.6em;
+  }
+  li {
+    font-size: 0.6em;
+  }
+  figcaption{
+    font-size: 0.6em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #external-links{
+    display: block;
+  }
+  main{
+    display: block;
   }
 }
