@@ -44,8 +44,3 @@ end
 
 puts "Welcome back, #{user}!"
  
-
-
-
-
-
