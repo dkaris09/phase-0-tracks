@@ -1,21 +1,51 @@
+Release 0: Equip Your New Robot
+
 #algo for using an elevator
 -puts "What floor are you currently on now?"
-	-floor =gets.chomp.to_i
+	floor =gets.chomp.to_i
 -puts "What direction are you heading, (Up/Down)?"
-	-direction=gets.chomp.to_s
+	direction=gets.chomp.to_s
 -if direction == Up
-	-puts "Wait for light above doors to turn yellow." 
+	puts "Wait for light above doors to turn yellow." 
 else 
-	-puts "Wait for light above doors to turn red."
+	puts "Wait for light above doors to turn red."
 end
 
 -puts "Please select a floor 1-10 to arrive at."
  	new_floor = gets.chomp.to_i
 	while new_floor != floor
 	
-	puts "Current floor:#{new_floor-=1} #if going down
+	puts "Current floor:#{new_floor -= 1} #if going down
 		
-	puts "Current floor:#{new_floor+=1}" #if going up
+	puts "Current floor:#{new_floor += 1}" #if going up
 end
+
+
+Release 1: Find a Real-Life Algorithm
+
+My real life example of an algorithm I use is my login info at atm
+
+user = "Chase0011"
+
+puts "Username:"
+user_input = gets.chomp
+
+password = "wireh01"
+puts "Password:"
+pw_input = gets.chomp
+
+while user_input != user || pw_inut != password
+	puts "Incorrect log-in info. Please try again."
+	puts "Username:"
+	user_input = gets.chomp
+	puts "Password:"
+	pw_input = gets.chomp
+end
+
+puts "Welcome back, #{user}!"
+ 
+
+
+
 
 
