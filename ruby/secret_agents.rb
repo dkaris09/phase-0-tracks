@@ -11,3 +11,5 @@ def decrypt(string)
 	end
 	puts result
 end
+
+decrypt
