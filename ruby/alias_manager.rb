@@ -23,6 +23,3 @@ def spy_method(name1,name2)
 	p split_name
 end
 spy_method("Felicia","Torres")
-
-vowels = ["a", "e", "i", "o", "u"]
-consonants = ["b","c","d","f","g","h","j","k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z"]
