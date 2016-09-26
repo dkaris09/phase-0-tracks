@@ -1,25 +1,40 @@
-#name1= "Felicia" 
-#name2= "Torres"
-#swap Felicia with Torres then combine into full name
-#name1
-	#full_name.next("aeiou")
-	#full_name.next("^aeiou")
-
-def spy_method(name1,name2)
-	full_name= name2 + " " + name1
-	full_name.downcase!
-	split_name = full_name.split("")
-	puts split_name
-	split_name.map! do |letter|
+#take the spy's first and last name 
+#swap the first with the last name 
+#change all the vowels in the name to the next vowel in line 
+def vowel?(letter)
 	vowels = "aeiou"
-	index = vowels.index(letter)
-	p index
-	if index == nil
-	letter
+	if vowels.include?(letter) 
+	letter = true 
+else 
+	letter = false 
+end 
+end
+
+vowel?("a")
+
+def consonant?(letter)
+	!vowel?(letter)
+end
+	
+def spy_method(first_name, last_name)
+	full_name = last_name + first_name #swap names
+	full_name.downcase! #lowercase all letters
+
+	split_name= full_name.split("") #split string names an array
+	p split_name
+	split_name.map! do |letter|
+		vowels = "aeiou"
+		index = vowels.index(letter)
+		p index
+		if index == nil #if consonant
+		letter 
 	else
+		 #modulus returns 0 if you try to access the non existent 5th vowel. 
+		 #0 then starts the vowel loop again.
 		vowels[(index+1) % 5]
 	end
 	end
 	p split_name
 end
-spy_method("Felicia","Torres")
+
+spy_method("Felicia", "Torres")
