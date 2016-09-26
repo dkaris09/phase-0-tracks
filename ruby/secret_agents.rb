@@ -1,3 +1,4 @@
+
 def encrypt(string)
     alphabet = "abcdefghijklmnopqrstuvwxyz"
     string = gets.chomp
@@ -28,3 +29,4 @@ end
 
 #I really struggled with this and had to turn in what I had. 
 #I'm going to try to redo this againnext week.
+>>>>>>> 31e143bb6dc3886cc4c2d53054740aa9032da5b0
