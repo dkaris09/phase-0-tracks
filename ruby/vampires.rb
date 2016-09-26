@@ -82,3 +82,8 @@ while employees > 0
 end
 	#Release 5
 	puts "Actually, nevermind! Let's be friends!"
+
+	#until (done == "done" || done == "sunshine") 
+   #puts "Any other allergies? Say \"done\" when you are finished."
+   #done = gets.chomp.downcase
+ #end
