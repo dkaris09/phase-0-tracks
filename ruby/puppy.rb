@@ -4,9 +4,10 @@ end
 
 catahoula = Puppy.new
 scottish_terrier = Puppy.new
-catahoula.instance_of?(Puppy)
-catahoula.class
-	
+p catahoula.instance_of?(Puppy)
+p catahoula.class
+p catahoula.length 
+
 # 	Breed ------------------------
 # 	Catahoula
 
