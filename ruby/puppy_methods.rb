@@ -50,10 +50,12 @@ catahoula.roll_over
 catahoula.dog_flip(2)
 
 # Release 2: Write Your Own Class, and Experiment!
+scotty = Dog.new 
+
 i = 0
 arr =[]
 while i < 50 
-	arr << catalouha = Dog.new
+	arr << scotty = Dog.new
  	i += 1 
 end
 p arr
