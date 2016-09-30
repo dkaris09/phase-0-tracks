@@ -6,7 +6,7 @@ catahoula = Puppy.new
 scottish_terrier = Puppy.new
 p catahoula.instance_of?(Puppy)
 p catahoula.class
-p catahoula.length 
+
 
 # 	Breed ------------------------
 # 	Catahoula
