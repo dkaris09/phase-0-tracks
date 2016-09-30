@@ -7,7 +7,7 @@ scottish_terrier = Puppy.new
 catahoula.instance_of?(Puppy)
 catahoula.class
 	
-# Breed ------------------------
+# 	Breed ------------------------
 # 	Catahoula
 
 # 	CHARACTERISTICS ----------------
@@ -21,4 +21,4 @@ catahoula.class
 # 	BEHAVIOR -----------------------
 # 	Protects: family children
 # 	Hunts: pigs, black bears, deer, raccoon, mountain lions
-# 	Herding: cattle, pigs=end
+# 	Herding: cattle, pigs
