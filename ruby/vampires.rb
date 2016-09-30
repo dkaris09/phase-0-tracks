@@ -1,4 +1,3 @@
-
 #Release 1
 puts "How many employees are being processsed?"
 employees = gets.chomp.to_i
@@ -14,18 +13,17 @@ while employees > 0
 		nice_name = false
 	end
 
-	current_age =32
 	current_year = 2016
 
 	puts "How old are you?"
-	age = gets.chomp.to_i
+	stated_age = gets.chomp.to_i
 	puts "When were you born?"
 	birth_year= gets.chomp.to_i
 	current_year = 2016
 
-	age = current_year - birth_year
-	if age == current_age
-		stated_age = true
+	current_age = current_year - birth_year
+	if stated_age == current_age
+		age = true
 	else
 		wrong_age = false
 	end
@@ -52,17 +50,17 @@ while employees > 0
 	end
 
 	#Do The Thing
-	 if stated_age && wolves_like_garlic || wolves_like_sunshine
-	 	puts "Probably not a vampire."
-	 elsif wrong_age && vampires_like_garlic || vampires_like_sunshine
-	 	puts  "Probably a vampire."
-	 elsif wrong_age && vampires_like_garlic && vampires_like_sunshine
-	 	puts "Almost cerntainly a vampire."
-	 elsif vampire_name
-	 	puts "Definately a vampire."
-	 else
-	 	puts "Results inconclusive."	
-	 end
+	if stated_age && wolves_like_garlic || wolves_like_sunshine
+		puts "Probably not a vampire."
+	elsif wrong_age && vampires_like_garlic || vampires_like_sunshine
+		puts  "Probably a vampire."
+	elsif wrong_age && vampires_like_garlic && vampires_like_sunshine
+		puts "Almost cerntainly a vampire."
+	elsif vampire_name
+		puts "Definately a vampire."
+	else
+		puts "Results inconclusive."	
+	end
 
 
 	#Release 4
@@ -77,14 +75,9 @@ while employees > 0
 			puts "Probably a vampire."
 			break
 		else
-		puts "Ok are there any more to list?"
+			puts "Ok are there any more to list?"
 		end
 	end
 end
 	#Release 5
 	puts "Actually, nevermind! Let's be friends!"
-
-	#until (done == "done" || done == "sunshine") 
-   #puts "Any other allergies? Say \"done\" when you are finished."
-   #done = gets.chomp.downcase
- #end
