@@ -4,6 +4,8 @@ end
 
 catahoula = Puppy.new
 scottish_terrier = Puppy.new
+catahoula.instance_of?(Puppy)
+catahoula.class
 	
 # Breed ------------------------
 # 	Catahoula
