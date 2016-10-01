@@ -24,18 +24,19 @@ class Santa
 		age.to_i + 1
 	end
 	# setter method
-	def gender
-		@gender = gender
+	def gender=(new_gender)
+		@gender = new_gender
 	end
 	# getter methods
 	def age
-		return @age
+		@age
 	end
 	def ethnicity
-		return @ethnicity
+		@ethnicity
 	end
 end
 
+	#Outside class
 
 # Driver Code
 nicolaus = Santa.new("male", "American","beard")
@@ -45,8 +46,11 @@ santas = []
 santas << Santa.new("male", "Polish", "mustache")
 santas << Santa.new("male", "Irish", "no beard")
 santas << Santa.new("female", "Brazilian", "Fu Manchu")
-
 p santas
+puts ""
+nicolaus.gender = "female"
+p nicolaus
+puts ""
 # Release 1: Give Santa Attributes for Christmas
 santas = []
 genders = ["female", "bigender", "male","N/A"]
