@@ -2,6 +2,9 @@
 # Release 0: Bring Santa to Life
 
 class Santa
+# Release 3: Refactor with attr_reader and attr_accessor
+	attr_reader :age, :ethnicity # for getters
+	attr_accessor :reindeer_ranking, :gender # for setters	
 
 	def initialize(gender, ethnicity, hair)
 		puts "Initializing Santa instance.."
