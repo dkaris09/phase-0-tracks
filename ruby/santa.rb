@@ -6,11 +6,10 @@ class Santa
 	attr_reader :age, :ethnicity # for getters
 	attr_accessor :reindeer_ranking, :gender # for setters	
 
-	def initialize(gender, ethnicity, hair)
+	def initialize(gender, ethnicity)
 		puts "Initializing Santa instance.."
 		@gender = gender
 		@ethnicity = ethnicity
-		@facial_hair = hair
 		@reindeer_ranking =  
 		["Rudolph", "Dasher", "Dancer", "Prancer", 
 		"Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
@@ -33,49 +32,32 @@ class Santa
 		@reindeer_ranking = reindeer_arr
 		reindeer_arr.insert(8, reindeer_arr.delete_at(0))
 	end
-	# setter methods
-	def gender=(new_gender)
-		@gender = new_gender
-	end
-
-	def reindeer_ranking=(reindeer_arr)
-		@reindeer_ranking = reindeer_arr
-	end
-	# getter methods
-	def age
-		@age
-	end
-	def ethnicity
-		@ethnicity
-	end
 end
 
 	#Outside class
 
 # Release 1: Give Santa Attributes for Christmas
 santas = []
-genders = ["female", "bigender", "male","N/A"]
-catholic_ethnicities = ["American", "Italian", "Irish", "Polish","Brazilian", "Filipino", "French"]
-
-
-example_hair = ["beard", "no beard", "mustache", "Fu Manchu"]
-genders.length.times do |i|
-	santas << Santa.new(genders[i],catholic_ethnicities[i], example_hair[i])
-end 
+example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+example_genders.length.times do |i|
+	santas << Santa.new(example_genders[i],example_ethnicities[i])
+end
 
 p santas
-nicolaus = Santa.new("male", "American","beard")
+nicolaus = Santa.new("male", "white")
 
 # Driver Code
-nicolaus = Santa.new("male", "American","beard")
+nicolaus = Santa.new("male", "white")
 nicolaus.speak
 nicolaus.eat_milk_and_cookies("oatmeal")
 santas = []
-santas << Santa.new("male", "Polish", "mustache")
-santas << Santa.new("male", "Irish", "no beard")
-santas << Santa.new("female", "Brazilian", "Fu Manchu")
+santas << Santa.new("male", "Latino")
+santas << Santa.new("male", "black")
+santas << Santa.new("female", "Mystical Creature (unicorn)")
 p santas
 puts ""
+
 # Release 2: Change an Attribute with a Method	
 puts ""
 p nicolaus.celebrate_birthday(0)
@@ -84,3 +66,14 @@ nicolaus
 puts nicolaus.ethnicity
 puts nicolaus.age
 puts ""
+
+# Release 4: Build Many, Many Santas
+
+50.times do |santa|
+	puts "------------"
+	santa = Santa.new(example_genders.sample,example_ethnicities.sample)
+	santa.age = rand(141)
+	puts "Santa's age: #{santa.age}"
+	puts "Santa's gender: #{gender}"
+	puts "Santa's ethnicity: #{ethnicity}"
+end
