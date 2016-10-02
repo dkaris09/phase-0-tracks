@@ -3,16 +3,14 @@
 
 class Santa
 # Release 3: Refactor with attr_reader and attr_accessor
-	attr_reader :age, :ethnicity # for getters
-	attr_accessor :reindeer_ranking, :gender # for setters	
+	attr_reader :ethnicity # for getters
+	attr_accessor :age, :reindeer_ranking, :gender # for setters	
 
 	def initialize(gender, ethnicity)
 		puts "Initializing Santa instance.."
 		@gender = gender
 		@ethnicity = ethnicity
-		@reindeer_ranking =  
-		["Rudolph", "Dasher", "Dancer", "Prancer", 
-		"Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+		@reindeer_ranking =  ["Rudolph", "Dasher", "Dancer", "Prancer","Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
 		@age = 0
 	end
 	
@@ -24,8 +22,8 @@ class Santa
 		puts "That was a good #{cookie_type} cookie!!!"
 	end
 	
-	def celebrate_birthday(age)
-		age.to_i + 1
+	def celebrate_birthday
+		@age += 1
 	end
 
 	def get_mad_at(name)
@@ -60,7 +58,7 @@ puts ""
 
 # Release 2: Change an Attribute with a Method	
 puts ""
-p nicolaus.celebrate_birthday(0)
+p nicolaus.celebrate_birthday
 nicolaus.gender = "female"
 nicolaus
 puts nicolaus.ethnicity
@@ -74,6 +72,6 @@ puts ""
 	santa = Santa.new(example_genders.sample,example_ethnicities.sample)
 	santa.age = rand(141)
 	puts "Santa's age: #{santa.age}"
-	puts "Santa's gender: #{gender}"
-	puts "Santa's ethnicity: #{ethnicity}"
+	puts "Santa's gender: #{example_genders}"
+	puts "Santa's ethnicity: #{example_ethnicities}"
 end
