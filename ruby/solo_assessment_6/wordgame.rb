@@ -2,13 +2,18 @@
 class WordGame
 	  attr_reader :guess_count
 	  attr_reader :is_over
-	def initialize(mystery_word)
-		@mystery_word = mystery_word
+	def initialize
+		@mystery_word = ["unicorn", "pony", "stallion"] 
 		@guess_count = 0
-		@guesses = mystery_word.length
+		@guesses = @mystery_word.length
 		@is_over = false 
-		@underscored_word = mystery_word.gsub(/[a-zA-Z]/, '_')
+		@underscored_word = @mystery_word.gsub(/[a-zA-Z]/, '_')
 	end
+	
+	def shuffle
+		@mystery_word.shuffle!
+	end
+	
 	def guess_method(word)
 		@guess_count += 1 
 		if @mystery_word == word 
@@ -17,11 +22,18 @@ class WordGame
 			false
 		end
 	end
+
+	def underscore
+		@mystery_word = @underscored_word
+	end
 end
 	
 # user interface 
 puts "Guess the Mystery Word!"
 word = WordGame.new
+
+puts "Picking a new mystery word..."
+word.shuffle
 
 while !word.is_over
 	puts "Can you guess what the word is?"
