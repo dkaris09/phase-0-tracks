@@ -10,10 +10,18 @@ function reversestr(str) {
     
     var reversestr = splitstr.reverse(); 
  
-    
     var joinstr = reversestr.join(""); 
 
     return joinstr; 
+    newvar = joinstr;
 }
- 
-reversestr("hello");
+
+newVar = reversestr("hello");
+
+console.log(newVar);
+var olleh = true 
+if (olleh){
+	console.log("I think that was Hello, right?");
+} else {
+	console.log("Hello!");
+}
