@@ -1,32 +1,58 @@
 
-def encrypt(string)
-    alphabet = "abcdefghijklmnopqrstuvwxyz"
-    string = gets.chomp
-    length = string.length
-    index = 0
-    result = ""
-
-    until index == length
-        result += alphabet[alphabet.index(string[index])-1]
-        index += 1
-    end
-    puts result
+def encrypt(input)
+  index = 0 
+  while index < input.length
+  if input[index] == ""     #space character should remain a space character
+    index += 1 
+  else 
+    if input[index] == "z"  #see if z goes to aa 
+    input[index] = "a"
+    else 
+    input[index] = input[index].next! #for every letter other than z, switch one over
+    end 
+    index += 1 
 end
+end 
+puts  input
+end 
 
-def decrypt(string)
+def decrypt(input)
+    # How can you find out where a letter is in the alphabet, then access the letter right before it?
+    def letter_length(letter) #defining method within a method to set length equal to index 
     alphabet = "abcdefghijklmnopqrstuvwxyz"
-    string = gets.chomp
-    length = string.length
-    index = 0
-    result = ""
+    new_index = alphabet.index(letter) -1   #accounts for length being 1 additional value 
+    alphabet[new_index]             #puts new letter formation with new index value 
+    end 
+    
+    # now length while loop can be reused 
+    index = 0 
+    while index < input.length 
+    if input[index] == ""           #space character should remain a space character
+    index += 1 
+    else 
+        input[index] = letter_length(input[index])
+        index += 1 
+    end 
+end 
+puts input #result of letter_reverse method and while loop 
+end 
 
-    until index == length
-        result += alphabet[alphabet.index(string[index])-1]
-        index += 1
-    end
-    puts result
-end
+#Release 5: Add an Interface
+puts "Would you like to decrypt or encrypt a password?"
+preference = gets.chomp
 
-#I really struggled with this and had to turn in what I had. 
-#I'm going to try to redo this againnext week.
->>>>>>> 31e143bb6dc3886cc4c2d53054740aa9032da5b0
+puts "Password, please."
+password = gets.chomp
+
+if preference == "encrypt"
+    puts encrypt(password)
+else
+    puts decrypt(password)
+end 
+
+# Driver Code
+#puts encrypt("abc") 
+#puts encrypt("zed")
+#puts decrypt("bcd") 
+#puts decrypt("afe") 
+#puts decrypt(encrypt("swordfish"))
