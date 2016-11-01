@@ -45,3 +45,4 @@ puts client_info
 
 #Driver Code 
 client_info[:address] + client_info[:name]
+client_info[:decor_theme]
