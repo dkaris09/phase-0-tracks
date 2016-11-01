@@ -18,31 +18,29 @@ puts client_info = {
 	phone: phone,
 	decor_theme: decor_theme
 }
-	
-puts "Make sure we have everything correct. Any changes we should make?"
-changes = gets.chomp 
 
-	if changes == "name" 
-		puts "Name:"
-		name = gets.chomp.to_s 
-	elsif changes == "address"
-		puts "Address:"
-		address = gets.chomp
-	elsif changes == "children"
-		puts "Do you have children? (yes/no)"
-		children = gets.chomp.to_s
-	elsif changes == "phone"
-		puts "Phone:"
-		phone = gets.chomp.to_i 
-	elsif changes == "decor theme"
-		puts "Decor Theme:"
-		decor_theme = gets.chomp.to_s 
-	else 
+# provide user changes for update	
+puts "Make sure we have everything correct. Any changes we should make? Type 'none' to quit."
+key = gets.chomp
+	if key ==  "none"
 		puts "Ok great!"
+	else 
+		puts "Update your user input that needs to change:"
+		key.to_sym 
+		value = gets.chomp 
 	end 
-puts "Here is the client info once again with any changes."
-puts client_info
-
-#Driver Code 
-client_info[:address] + client_info[:name]
-client_info[:decor_theme]
+	
+#Convert data entry 
+	if key == :name 
+		value.to_s 
+	elsif key == :children 
+		if value.to_s 
+	elsif key == :phone 
+		value.to_i 
+	elsif key == :decor_theme
+		value.to_s 
+	end
+end 		
+puts client_info[key] = value 
+puts "Here's the updated client info:"
+p client_info
