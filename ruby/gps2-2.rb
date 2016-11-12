@@ -37,11 +37,11 @@ p add_item(list, "carrots", 2)
 # input:
 # steps:
 # output:
-def delete_item(list, item, quantity)
+def delete_item(list, item)
 	list.delete(item)
 	list
 end
-p delete_item(list,"carrots", 1)
+p delete_item(list,"carrots")
 
 # Method to update the quantity of an item
 # input:
@@ -60,6 +60,24 @@ def print_list(groceries)
 	groceries.each do |key, value|
 		puts "#{key}: + #{value}"
 	end 
-end 
+end    
 
+p print_list(list)
+puts " "
+
+# Driver Code 
+# Add the following items to your list
+# Lemonade, qty: 2
+# Tomatoes, qty: 3
+# Onions, qty: 1
+# Ice Cream, qty: 4
+
+p add_item(list, "Lemonade", 2)
+p add_item(list, "Tomatoes", 3)
+p add_item(list, "Onions", 1)
+p add_item(list, "Ice Cream", 4)
+list 
+
+p delete_item(list, "Lemonade")
+p update_list(list,"Ice Cream", 1)
 p print_list(list)
