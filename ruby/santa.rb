@@ -61,7 +61,6 @@ p santa.age
 p santa.ethnicity
 p santa.rand_age
 
-# Release 4: Build Many, Many Santas
 100.times do |i|
 	puts "Iterating through names list to create santas ..."
 	new_santa = Santa.new(example_genders.sample, example_ethnicities.sample)
