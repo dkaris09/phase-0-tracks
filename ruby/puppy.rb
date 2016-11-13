@@ -23,3 +23,13 @@ p catahoula.class
 # 	Protects: family children
 # 	Hunts: pigs, black bears, deer, raccoon, mountain lions
 # 	Herding: cattle, pigs
+
+# Driver Code 
+str = String.new 
+puts str.length 
+puts str.empty?
+puts str += "huh."
+greeting = String.new("Hey buddy!")
+p greeting
+p greeting = "Hi!"
+p greeting.upcase
