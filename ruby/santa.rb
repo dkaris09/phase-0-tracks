@@ -28,6 +28,10 @@ class Santa
 		@reindeer_ranking.insert(-1, @reindeer_ranking.delete_at(i))
 		p @reindeer_ranking
 	end 
+	
+	def rand_age 
+		@rand_age = rand(140)
+	end 
 end 
 
 # Driver Code
@@ -53,3 +57,16 @@ p santa.celebrate_birthday
 
 # Release 2: Change an Attribute with a Method
 p santa.get_mad_at("Vixen")
+p santa.age 
+p santa.ethnicity
+p santa.rand_age
+
+# Release 4: Build Many, Many Santas
+100.times do |i|
+	puts "Iterating through names list to create santas ..."
+	new_santa = Santa.new(example_genders.sample, example_ethnicities.sample)
+	puts "Gender: #{new_santa.gender}"
+	puts "Ethnicity: #{new_santa.ethnicity}"
+	puts "Age: #{new_santa.rand_age}"
+	puts "----"
+end 
