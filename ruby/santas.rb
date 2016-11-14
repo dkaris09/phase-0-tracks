@@ -68,4 +68,4 @@ p santa.rand_age
 	puts "Ethnicity: #{new_santa.ethnicity}"
 	puts "Age: #{new_santa.rand_age}"
 	puts "----"
-end 
+end
